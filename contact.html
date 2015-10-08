@@ -11,6 +11,25 @@
     .bs-example{
     	margin: 20px;
     }
+	#yourName{
+		width: auto;
+		margin-left:50px;
+		}
+	#company{
+		width: auto;
+		margin-left:50px;
+		}
+	#emailAddr{
+		width: auto;
+		margin-left:50px;
+		}
+	#message{
+		width: 20%;
+		margin-left:50px;
+		}
+	#submit{
+		margin-left:50px;
+		}
 </style>
 </head> 
 <body>
@@ -37,13 +56,14 @@
     </nav>
 </div>
 <div class='row col-md-12'>
-	<h2>Thank you for your interest</h2>
+	<h2>Thank you for your interest</h2><br>
 </div>
 <form action="form.js">
 	<div class="row">
 		<input id="yourName"type="text" class="form-control" placeholder="Your Name" required><br>
 		<input id="company"type="text" class="form-control" placeholder="Company"><br>
 		<input id="emailAddr"type="text" class="form-control" placeholder="Email Address" required><br>
-		<button><i class="glyphicon glyphicon-hand-right">Send me some email</i></button>
+		<textarea id="message" type="text" class="form-control" placeholder="What do you want to talk about?"></textarea><br>
+		<button id="submit" class="btn btn-primary">email me &nbsp;<i class="glyphicon glyphicon-send"></i></button>
 	</div>
 </form>	
