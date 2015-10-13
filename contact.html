@@ -5,13 +5,19 @@
 <title>Contact</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="animate.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!-- Custom CSS -->
 <style type="text/css">
+
+	#nameLabel {
+		margin-left: 20px;
+	}
     .bs-example{
     	margin: 20px;
     }
-	#yourName{
+	#frmNameA{
 		width: auto;
 		margin-left:50px;
 		}
@@ -30,6 +36,10 @@
 	#submit{
 		margin-left:50px;
 		}
+	#well {
+		margin: 0 auto;
+		width: 10%;
+	}
 </style>
 </head> 
 <body>
@@ -58,12 +68,21 @@
 <div class='row col-md-12'>
 	<h2 class="text-primary text-center">Thank you for your interest</h2><br>
 </div>
+<!-- Form stuff -->
 <form action="form.js">
 	<div class="row">
-		<input id="yourName"type="text" class="form-control" placeholder="Your Name" required><br>
+		<input class="form-control" type="text" name="name" id="frmNameA" placeholder="Full Name" required autocomplete="name"><br>
 		<input id="company"type="text" class="form-control" placeholder="Company"><br>
 		<input id="emailAddr"type="text" class="form-control" placeholder="Email Address" required><br>
 		<textarea id="message" type="text" class="form-control" placeholder="What do you want to talk about?"></textarea><br>
-		<button id="submit" class="btn btn-primary">email me &nbsp;<i class="glyphicon glyphicon-send"></i></button>
+	<!-- <div class="well well-sm"> -->
+			<button id="submit" class="btn btn-primary">email me &nbsp;<i class="glyphicon glyphicon-send"></i></button>
+		<!-- </div> -->
 	</div>
 </form>	
+<!-- Button bounce -->
+<script>
+  $(document).ready(function() {
+    $("button").addClass("animated bounce");
+  });
+</script>
